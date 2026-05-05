@@ -24,7 +24,7 @@ cd vibeWorkshop
 
 ### 2. Local Environment Setup (10 min)
 
-Walk everyone through getting the server running:
+Walk everyone through getting Python ready and dependencies installed. **How you start the server depends on which AI tool you pick in section 3** — Imp boots the server for you; Claude Code / Codex users run it manually.
 
 ```bash
 # Python check
@@ -33,9 +33,11 @@ python3 --version   # Need 3.10+
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the server
+# Manual server start (Claude Code / Codex users)
 python server.py
 # → Open http://localhost:8000 in two tabs
+
+# Imp users: skip the manual start — `imp` will boot the server itself after you paste the Kimi key
 ```
 
 **Common issues and fixes:**
@@ -49,9 +51,17 @@ python server.py
 
 ### 3. AI Tool Setup (15 min)
 
-Participants pick ONE tool based on their comfort level. Walk through each:
+Participants pick ONE tool. The recommended default is **Imp + Kimi** because there's nothing to sign up for and I'm providing the API key. Walk through each:
 
-#### Option A: Claude Code (terminal users)
+#### Option A — Default: Imp + Kimi
+
+- Bundled in this repo — no separate install
+- Run `imp` from the repo root
+- On first launch, Imp prompts for a **Kimi API key** before booting the local webserver — paste in the key I hand out at the start of the workshop
+- Imp then starts the local game server itself, so this is **also how you "run the project"** — no separate `python server.py` step needed
+- Best for: most participants. No signup, no payment, no key management headaches
+
+#### Option B: Claude Code
 
 ```bash
 # Install (if not already)
@@ -62,11 +72,12 @@ cd vibeWorkshop
 claude
 ```
 
-- Needs: Anthropic API key OR Claude Pro/Max subscription
+- Needs: Anthropic API key OR Claude Pro/Max subscription (bring your own)
 - Set API key: `export ANTHROPIC_API_KEY=sk-ant-...`
 - Test: type "what files are in this repo?" and confirm it responds
+- You'll start the game server separately with `python server.py`
 
-#### Option B: Codex (terminal users)
+#### Option C: Codex
 
 ```bash
 # Install
@@ -77,16 +88,10 @@ cd vibeWorkshop
 codex
 ```
 
-- Needs: OpenAI API key
+- Needs: OpenAI API key (bring your own)
 - Set API key: `export OPENAI_API_KEY=sk-...`
 - Test: ask it to list the project structure
-
-#### Option C: Imp (project manager style)
-
-- Already bundled in this repo
-- Run: `imp` from the repo root
-- No extra API key needed if Claude Code is configured
-- Good for people who want guided workflows
+- You'll start the game server separately with `python server.py`
 
 #### Option D: Lovable (zero-setup, visual)
 
@@ -98,9 +103,9 @@ codex
 ### 4. API Key Troubleshooting (5 min buffer)
 
 **If someone doesn't have an API key:**
-- Pair them with someone who does (pair programming!)
-- Use Lovable as fallback (no key needed)
-- Provide a shared key for the workshop (if you have one — set a spending limit!)
+- Default to **Imp + Kimi** — I'm providing the Kimi key, no signup needed
+- Lovable is the other zero-key path
+- Pair them with someone who has Claude Code / Codex working if they really want one of those
 
 **If someone's machine won't cooperate:**
 - Lovable fallback — works in any browser
