@@ -46,7 +46,9 @@ All documentation in this repo — this README, the eight step files, comments, 
 
 ## Tools and notes
 
-Lovable [(]project](https://lovable.dev/projects/06500f2a-c2b4-4ff0-b1b3-5e101f531568?magic_link=mc_6363ceb5-92aa-4787-a611-c386719423bc)
+Lovable [project](https://lovable.dev/projects/06500f2a-c2b4-4ff0-b1b3-5e101f531568?magic_link=mc_6363ceb5-92aa-4787-a611-c386719423bc)
+
+[new lovable](https://blast-buddies-race.lovable.app)
 
 ## License
 
