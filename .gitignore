@@ -1,0 +1,8 @@
+# Imp tool local state
+.imp/
+
+# Local workshop-day repo checkout (served via serve_repo.py)
+repo_checkout/
+
+# Dated QR-code outputs (workshop-day artifacts; named QRs like qr_imp.png stay tracked)
+qr_20*.png
